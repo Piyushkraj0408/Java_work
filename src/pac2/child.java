@@ -14,3 +14,5 @@ public class child {
         obj.showAccess();
     }
 }
+//There are seven interfaces in collections and 3 interfaces in map
+//Duplicates are allowed and insertion order is preserved
