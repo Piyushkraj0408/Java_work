@@ -1,4 +1,6 @@
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class LinkedListDemo {
     public static void main(String[] args){
@@ -10,19 +12,12 @@ public class LinkedListDemo {
         list.offerFirst("E");
         list.offerLast("F");
         System.out.println(list);
-        //Java DOC
-        System.out.println(list.getFirst());
-        System.out.println(list.getLast());
-        System.out.println(list.peekFirst());
-        System.out.println(list.peekLast());
-
-        System.out.println(list.removeFirst());
-        System.out.println(list.removeLast());
-        System.out.println(list);
-
-        list.push("X");
-        list.push("Y");
-        System.out.println(list.pop());
-
+        ListIterator<String> it = list.listIterator();
+        while(it.hasNext()){
+            it.next();
+        }
+        while(it.hasPrevious()){
+            System.out.println(it.previous());
+        }
     }
 }
